@@ -1,0 +1,144 @@
+
+
+body {
+    font-family: Georgia, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    background-image: url("./site-pics/background1.webp");
+}
+.photo {
+    height: 300px;
+    width:auto;
+}
+/* Header Styling */
+.header {
+    background-color: transparent;
+    display: flex;
+    justify-content:space-evenly ;
+    align-items: center;
+    color: #F2D5A0;
+    padding: 20px;
+    text-align: center;
+    font-family: arial;
+    /* background-image: url("./site-pics/background1.webp"); */
+    height: 250px;
+}
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+.firstname {
+    color: #F2D5A0;
+}
+/* About Me Section */
+.about-me {
+    padding: 20px;
+    background-image: url("./site-pics/papertexture2.webp");
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.about-me h2 {
+    margin-top: 0;
+    color: #2980b9;
+    text-align: center;
+}
+
+.about-me p {
+    line-height: 1.6;
+    text-align: center;
+    color:#396873;
+}
+
+/* Experience Section */
+.experience {
+    padding: 20px;
+    background-image: url("./site-pics/papertexture1.webp");
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: fit-content;
+}
+
+.experience h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.experience-item h3 {
+    margin: 0;
+    color: #2980b9;
+}
+
+.experience-item p {
+    margin: 5px 0;
+    line-height: 1.6;
+    color: #396873;
+}
+
+/* Skills Section */
+.skills {
+    padding: 20px;
+    background-image: url("./site-pics/texture3.png");
+    margin: 20px;
+    border-radius: 10px;
+    min-width: fit-content;
+}
+
+.skills h2 {
+    margin-top: 0;
+    color: #2980b9;
+    text-align: center;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    color: #396873;
+}
+
+.skills li {
+    background-color: transparent;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Contact Section */
+.contact {
+    padding: 20px;
+    background-image: url("./site-pics/texture4.png");
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-top: 0;
+    color: #2980b9;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #396873;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: transparent
+    
+}
