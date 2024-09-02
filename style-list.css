@@ -5,7 +5,10 @@ body {
     margin: 0;
     padding: 0;
     background-color: transparent;
-    background-image: url("./site-pics/background1.webp");
+    /* background-image: url("./site-pics/background1.jpg"); */
+    /* background-image: url("./site-pics/background2.jpg"); */
+    background-image: url("./site-pics/torrey-golf.jpg");
+    background-repeat:space;
 }
 .photo {
     height: 300px;
@@ -17,7 +20,7 @@ body {
     display: flex;
     justify-content:space-evenly ;
     align-items: center;
-    color: #F2D5A0;
+    color: #172601;
     padding: 20px;
     text-align: center;
     font-family: arial;
@@ -29,7 +32,7 @@ body {
     font-size: 36px;
 }
 .firstname {
-    color: #F2D5A0;
+    color: #384C73;
 }
 /* About Me Section */
 .about-me {
