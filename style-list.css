@@ -1,5 +1,4 @@
-
-
+/* Base Styles */
 body {
     font-family: Georgia, sans-serif;
     margin: 0;
@@ -13,6 +12,7 @@ body {
     min-height: 100vh;
 }
 
+/* Sidebar Styles */
 .sidebar {
     width: 280px;
     height: 100vh;
@@ -73,7 +73,7 @@ body {
     flex: 1;
 }
 
-/* Header Styling */
+/* Header Styles */
 .header {
     background-color: transparent;
     display: flex;
@@ -94,36 +94,47 @@ body {
     color: #008394;
 }
 
-/* Experience Section */
-.experience {
+/* Section Common Styles */
+.experience,
+.skills,
+.contact,
+.projects {
     position: relative;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
     background: none;
-    text-align: center;
+    isolation: isolate;
+    overflow: hidden;
 }
 
-.experience::before {
+.experience::before,
+.skills::before,
+.contact::before,
+.projects::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
-    background-image: url("./site-pics/papertexture1.webp");
-    opacity: 0.85;
+    opacity: 0.75;
     z-index: -1;
     border-radius: 10px;
     background-color: rgba(200, 100, 100, 0.2);
     background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
 }
 
-.experience h2 {
-    margin-top: 0;
-    color: #2980b9
-}
+.experience::before { background-image: url("./site-pics/papertexture1.webp"); }
+.skills::before { background-image: url("./site-pics/texture3.png"); }
+.contact::before { background-image: url("./site-pics/texture4.png"); }
+.projects::before { background-image: url("./site-pics/texture3.png"); }
 
+/* Experience Section */
 .experience-item {
     margin-bottom: 20px;
 }
@@ -140,37 +151,6 @@ body {
 }
 
 /* Skills Section */
-
-.skills {
-    position: relative;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    background: none;
-    text-align: center;
-}
-
-.skills::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("./site-pics/texture3.png");
-    opacity: 0.75;
-    z-index: -1;
-    border-radius: 10px;
-    background-color: rgba(200, 100, 100, 0.2);
-    background-blend-mode: overlay;
-}
-
-.skills h2 {
-    margin-top: 0;
-    color: #2980b9;
-    text-align: center;
-}
-
 .skills-list {
     list-style: none;
     padding: 0;
@@ -208,134 +188,23 @@ body {
     transition: all 0.3s ease;
 }
 
-.fa-map-marked-alt { 
-    color: #4285F4;
-}
+/* Icon Colors */
+.fa-map-marked-alt { color: #4285F4; }
+.fa-aws { color: #FF9900; }
+.fa-cloud { color: #2C7EA1; }
 
-.fa-aws { 
-    color: #FF9900;
-}
-
-.fa-cloud {
-    color: #2C7EA1;
-}
-
-.skill-icons i:hover {
-    transform: scale(1.3);
-    filter: brightness(1.2);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-
-
-/* Contact Section */
-.contact {
-    position: relative;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    background: none;
-    text-align: center;
-}
-
-.contact::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("./site-pics/texture4.png");
-    opacity: 0.75;
-    z-index: -1;
-    border-radius: 10px;
-    background-color: rgba(200, 100, 100, 0.2);
-    background-blend-mode: overlay;
-}
-
-.contact h2 {
-    margin-top: 0;
-    color: #2980b9;
-}
-
-.contact a {
-    text-decoration: none;
-    color: #396873;
-    font-weight: bold;
-}
-
-.contact a:hover {
-    text-decoration: underline;
-}
-
-.devicon-javascript-plain {
-    color: #F7DF1E;
-}
-
-.devicon-react-original {
-    color: #61DAFB;
-}
-
-.devicon-redux-original {
-    color: #764ABC;
-}
-
-.devicon-python-plain {
-    color: #3776AB;
-}
-
-.devicon-flask-original {
-    color: #000000;
-}
-
-.devicon-nodejs-plain {
-    color: #339933;
-}
-
-.devicon-express-original {
-    color: #000000;
-}
-
-.devicon-postgresql-plain {
-    color: #336791;
-}
-
-.devicon-sqlite-plain {
-    color: #003B57;
-}
-
-.devicon-git-plain {
-    color: #F05032;
-}
-
-.devicon-github-original {
-    color: #181717;
-}
-
-.sidebar-contact {
-    margin-top: auto;
-    margin-bottom: 20px;
-    padding: 20px 0;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-
-.sidebar-contact h2 {
-    color: #009ece;
-    margin-bottom: 15px;
-}
-
-.sidebar-contact a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: bold;
-    color:#61DAFB;
-}
-
-.sidebar-contact a:hover {
-    text-decoration: underline;
-}
+/* Dev Icons Colors */
+.devicon-javascript-plain { color: #F7DF1E; }
+.devicon-react-original { color: #61DAFB; }
+.devicon-redux-original { color: #764ABC; }
+.devicon-python-plain { color: #3776AB; }
+.devicon-flask-original { color: #000000; }
+.devicon-nodejs-plain { color: #339933; }
+.devicon-express-original { color: #000000; }
+.devicon-postgresql-plain { color: #336791; }
+.devicon-sqlite-plain { color: #003B57; }
+.devicon-git-plain { color: #F05032; }
+.devicon-github-original { color: #181717; }
 
 /* Projects Section */
 .projects {
@@ -452,13 +321,18 @@ body {
     }
 }
 
-.projects, .skills, .experience {
+.projects, 
+.skills, 
+.experience {
     scroll-snap-align: start;
     min-height: 100vh;
     padding-top: 2rem;
+    margin-bottom: 2rem;
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
     animation-play-state: paused;
+    position: relative;
+    z-index: 1;
 }
 
 .projects.visible, 
@@ -502,4 +376,29 @@ body {
     .skill-icons {
         padding-left: 0;
     }
+}
+
+.sidebar-contact {
+    margin-top: auto;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.sidebar-contact h2 {
+    color: #009ece;
+    margin-bottom: 15px;
+}
+
+.sidebar-contact a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    color:#61DAFB;
+}
+
+.sidebar-contact a:hover {
+    text-decoration: underline;
 }
