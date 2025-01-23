@@ -14,34 +14,19 @@ body {
 }
 
 .sidebar {
-    width: 250px;
+    width: 280px;
     height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
-    background-image: url("./site-pics/background1.jpg");
-    background-size: 1500px auto;
+    background-image: url("./site-pics/background4.jpg");
+    background-size: 1400px auto;
     background-position: center top;
     background-repeat: repeat;
     padding: 20px;
-    overflow-y: auto;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
+    overflow-y: auto;
 }
-
-
-.sidebar::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.466);
-    z-index: -1;
-}
-
 
 .profile-section, .about-section {
     position: relative;
@@ -50,10 +35,11 @@ body {
 }
 
 .profile-section {
+    position: relative;
+    z-index: 1;
     text-align: center;
     margin-bottom: 20px;
-    color: rgb(177, 239, 255)
-    
+    color: rgb(177, 239, 255);
 }
 
 .photo {
@@ -104,38 +90,6 @@ body {
 }
 .firstname {
     color: #008394;
-}
-/* About Me Section */
-.about-me {
-    padding: 20px;
-    background-image: url("./site-pics/papertexture2.webp");
-    margin: 20px;
-    border-radius: 10px;
-}
-
-.about-me::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("./site-pics/papertexture2.webp");
-    opacity: 0.5;
-    z-index: -1;
-    border-radius: 10px;
-}
-
-.about-me h2 {
-    margin-top: 0;
-    color: #2980b9;
-    text-align: center;
-}
-
-.about-me p {
-    line-height: 1.6;
-    text-align: center;
-    color:#15272b;
 }
 
 /* Experience Section */
@@ -252,18 +206,6 @@ body {
     transition: all 0.3s ease;
 }
 
-.devicon-javascript-plain { color: #F7DF1E; }
-.devicon-react-original { color: #61DAFB; }
-.devicon-redux-original { color: #764ABC; }
-.devicon-python-plain { color: #3776AB; }
-.devicon-flask-original { color: #000000; }
-.devicon-nodejs-plain { color: #339933; }
-.devicon-express-original { color: #000000; }
-.devicon-postgresql-plain { color: #336791; }
-.devicon-sqlite-plain { color: #003B57; }
-.devicon-git-plain { color: #F05032; }
-.devicon-github-original { color: #181717; }
-
 .fa-map-marked-alt { 
     color: #4285F4;
 }
@@ -358,13 +300,6 @@ body {
 
 .contact a:hover {
     text-decoration: underline;
-}
-
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: transparent
-    
 }
 
 .devicon-javascript-plain {
