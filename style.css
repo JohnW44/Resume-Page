@@ -466,6 +466,7 @@ body {
 
 .resume-thumbnail:hover {
     transform: scale(1.05);
+    cursor: zoom-in;
 }
 
 .expand-button {
