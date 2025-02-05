@@ -518,3 +518,17 @@ body {
 .close-button:hover {
     color: #666;
 }
+@media (max-width: 768px) {
+    .modal-content {
+        width: 98%; 
+        height: 98%;
+        margin: 1% auto;
+        padding: 5px;
+    }
+
+    .close-button {
+        right: 10px;
+        top: 5px;
+        font-size: 24px;
+    }
+}
