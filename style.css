@@ -1,18 +1,14 @@
-/* Base Styles */
 body {
     font-family: Georgia, sans-serif;
     margin: 0;
     padding: 0;
     background-color: transparent;
-    /* background-image: url("./site-pics/background1.jpg"); */
-    /* background-image: url("./site-pics/background2.jpg"); */
     background-color: #000f38;
     background-repeat:space;
     display: flex;
     min-height: 100vh;
 }
 
-/* Sidebar Styles */
 .sidebar {
     width: 280px;
     height: 100vh;
@@ -506,18 +502,29 @@ body {
     border-radius: 8px;
 }
 
+.modal-controls {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px 8px 0 0;
+}
+
 .close-button {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 30px;
+    background: none;
+    border: none;
+    font-size: 24px;
     color: #333;
     cursor: pointer;
+    padding: 5px 10px;
+    transition: color 0.3s;
 }
+
 
 .close-button:hover {
     color: #666;
 }
+
 @media (max-width: 768px) {
     .modal-content {
         width: 98%; 
