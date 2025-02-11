@@ -42,7 +42,7 @@
             <div class="project-item">
                 <div class="project-description">
                     <h3>No Worries</h3>
-                    <p>A social networking app, designed to help the elderly connect with thier neighbors and ask for help, or volunteer to help. Built with React, Redux, and a Flask backend. Utilizing the google maps Places, Geocoding, and Maps JavaScript APIs</p>
+                    <p>A social networking app, designed to help the elderly connect with thier neighbors and ask for help, or volunteer to help. Built with React, Redux, and a Flask backend. Utilizing the google maps Markers, InfoWindows, and Maps JavaScript APIs</p>
                     <div class="project-links">
                         <a href="https://github.com/JohnW44/Capstone" target="_blank">GitHub</a>
                         <a href="https://capstone-noworries.onrender.com/" target="_blank">Live Demo</a>
@@ -126,7 +126,7 @@
                     </span>
                 </li>
                 <li>
-                    <span class="skill-text">APIs & Services: Google Maps (Places, Geocoding, Maps JavaScript), AWS (S3)</span>
+                    <span class="skill-text">APIs & Services: Google Maps (InfoWindows, Markers, Maps JavaScript), AWS (S3)</span>
                     <span class="skill-icons">
                         <i class="fas fa-map-marked-alt"></i>
                         <i class="fab fa-aws"></i>      
@@ -180,9 +180,12 @@
                     </div>
                     <div class="resume-modal" id="resumeModal">
                         <div class="modal-content">
-                            <span class="close-button" onclick="closeResume()">&times;</span>
-                            <embed src="./site-pics/JohnWintzResume20252.pdf" type="application/pdf" width="100%" height="100%">
-                        </div>
+                            <div class="modal-controls">
+                                <span class="close-button" onclick="closeResume()">Close</span>
+                            </div>
+                            <div class="pdf-container">
+                                <embed src="./site-pics/JohnWintzResume20252.pdf" type="application/pdf" width="100%" height="100%">
+                            </div>
                     </div>
                 </div>
             </div>
@@ -225,12 +228,11 @@
 
             function openResume() {
         document.getElementById('resumeModal').style.display = 'block';
-        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
     }
 
     function closeResume() {
         document.getElementById('resumeModal').style.display = 'none';
-        document.body.style.overflow = 'auto'; // Restore scrolling
+        document.body.style.overflow = 'auto';
     }
 
     window.onclick = function(event) {
