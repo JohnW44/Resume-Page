@@ -26,6 +26,26 @@ body {
                 inset -1px 0 8px rgba(0, 0, 0, 0.6); 
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #008394 rgba(177, 239, 255, 0.1);
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: rgba(177, 239, 255, 0.1);
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: #008394;
+    border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: #006d7a;
 }
 
 .profile-section, .about-section {
