@@ -174,10 +174,11 @@
 					e.preventDefault();
 					
 					const formData = {
-						from_name: document.querySelector('input[name="name"]').value,
-						from_email: document.querySelector('input[name="email"]').value,
-						message: document.querySelector('textarea[name="message"]').value
-					};
+				        from_name: document.querySelector('input[name="name"]').value, 
+				        name: document.querySelector('input[name="name"]').value,       
+				        email: document.querySelector('input[name="email"]').value,     
+				        message: document.querySelector('textarea[name="message"]').value
+					    };
 					
 					emailjs.send('service_tu08ysk', 'template_ayq973k', formData)
 						.then(function(response) {
@@ -191,5 +192,6 @@
 
 	</body>
 </html>
+
 
 
