@@ -2222,7 +2222,7 @@ input, select, textarea {
 				-moz-transition: none;
 				-webkit-transition: none;
 				-ms-transition: none;
-				transition: none;
+				transition: all 0.3s ease;
 			}
 
 				#nav ul li a span {
@@ -2231,14 +2231,14 @@ input, select, textarea {
 					font-size: 0.8em;
 				}
 
-					#nav ul li a span:before {
-						position: absolute;
-						left: 0;
-						color: #41484c;
-						text-align: center;
-						width: 1.25em;
-						line-height: 1.75em;
-					}
+				#nav ul li a span:before {
+					position: absolute;
+					left: 0;
+					/* color: #41484c; */
+					text-align: center;
+					width: 1.25em;
+					line-height: 1.75em;
+				}
 
 				#nav ul li a.active {
 					background: rgba(0, 0, 0, 0.15);
@@ -2246,10 +2246,17 @@ input, select, textarea {
 					color: #fff;
 				}
 
-					#nav ul li a.active span:before {
-						color: #e27689;
-					}
+				#nav ul li a.active span:before {
+					color: #e27689;
+				}
+				#nav ul li a:hover {
+				transform: translateX(5px);
+				color: #4acaa8 !important;
+			}
 
+			#contact-link:hover span {
+				color: #4acaa8 !important; 
+			}
 /* Footer */
 
 	#footer {
@@ -2710,20 +2717,42 @@ input, select, textarea {
 
 }
 
+@keyframes subtleGlow {
+    0%, 100% {
+        text-shadow: 0 0 2px rgba(255, 215, 0, 1) !important;
+    }
+    50% {
+        text-shadow: 0 0 50px rgba(255, 215, 0, 1),
+                     0 0 60px rgba(255, 215, 0, 0.8) !important;
+    }
+}
+
+#top h2.alt strong{
+animation: subtleGlow 4s ease-in-out infinite !important;
+}
+
+#top h2.alt {
+	animation: subtleGlow 4s ease-in-out infinite !important;
+}
+
+#top {
+	animation: subtleGlow 4s ease-in-out infinite !important;
+}
+
 #top {
     color: darkslategray !important;
 }
 
 #top h2.alt {
-    color: darkslategray !important;
+    color: darkslategray;
 }
 
 #top h2.alt strong {
-    color: darkslategray !important;
+    color: darkslategray;
 }
 
 #top p {
-    color: darkslategray !important;
+    color: darkslategray;
 }
 
 #top h2.alt strong {
@@ -2738,8 +2767,105 @@ input, select, textarea {
     font-weight: 500 !important;
 }
 
-/* Move the header (name and welcome text) up */
 #top header {
-    margin-top: -4em !important;  /* Adjust this value to move up/down */
+    margin-top: -4em !important;
 }
 
+@keyframes testPulse {
+    0%, 100% {
+        transform: scale(1) !important;
+    }
+    50% {
+        transform: scale(1.1) !important;
+    }
+}
+
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* gap: 2rem; */
+    /* margin-top: 2rem; */
+    /* padding: 1rem; */
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+    /* border-color: #4acaa8; */
+    /* box-shadow: 0 10px 30px rgba(74, 202, 168, 0.3); */
+}
+
+.tech-item img,
+.tech-item svg {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+    filter: grayscale(100%) ;
+}
+
+.tech-item:hover img,
+.tech-item:hover svg {
+    filter: none;
+    transform: scale(1.1);
+}
+
+.tech-item span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.tech-item:hover span {
+    color: #4acaa8;
+}
+
+.tech-item[data-tech="Sanity"]:hover svg {
+    color: #f03e2f;
+}
+
+@media screen and (max-width: 736px) {
+    .tech-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1rem;
+    }
+    
+    .tech-item {
+        padding: 1rem;
+    }
+    
+    .tech-item img,
+    .tech-item svg {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .tech-item span {
+        font-size: 0.8rem;
+    }
+}
+
+#contact a:hover {
+    color: #4acaa8;
+    border-bottom-color: rgba(74, 202, 168, 0.3);
+	font-weight: 800;
+}
+
+#contact .icons a:hover {
+    color: #4acaa8;
+}
