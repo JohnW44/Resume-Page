@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Prologue by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>John Wintz - Software Engineer</title>
@@ -31,6 +26,7 @@
 							<ul>
 								<li><a href="#top" id="top-link"><span class="icon solid fa-rocket">Top</span></a></li>
 								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-briefcase">Portfolio</span></a></li>
+								<!-- <li><a href="javascript:void(0);" class="no-scroll" onclick="openResumeModal(event)"><span class="icon solid fa-file-pdf">Resume</span></a></li> -->
 								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
 								<li><a href="#technologies" id="technologies-link"><span class="icon solid fa-laptop-code">Technologies</span></a></li>
 								<li><a href="#contact" id="contact-link"><span class="icon solid fa-paper-plane">Contact</span></a></li>
@@ -43,9 +39,10 @@
 
 					<!-- Social Icons -->
 						<ul class="icons">
-							<li><a href="www.linkedin.com/in/john-wintz-45069320" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/JohnWintz" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/john-wintz-45069320" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/JohnW44" class="icon brands fa-github"><span class="label">Github</span></a></li>
 							<li><a href="mailto:johnwintz@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="#" class="icon solid fa-file-pdf" onclick="openResumeModal(event)"><span class="label">Resume</span></a></li>
 						</ul>
 
 				</div>
@@ -66,6 +63,7 @@
 
 							<footer>
 								<a href="#contact" class="button scrolly">Contact</a>
+								<a href="#" class="button" onclick="openResumeModal(event)">View Resume</a>
 							</footer>
 
 						</div>
@@ -219,7 +217,7 @@
 											<h3>Connect</h3>
 											<ul class="icons">
 												<li><a href="https://www.linkedin.com/in/john-wintz-45069320" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-												<li><a href="https://github.com/JohnWintz" class="icon brands fa-github"><span class="label">Github</span></a></li>
+												<li><a href="https://github.com/JohnW44" class="icon brands fa-github"><span class="label">Github</span></a></li>
 											</ul>
 										
 									</ul>
@@ -243,5 +241,55 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+			<!-- Resume Modal -->
+		<div id="resumeModal" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2>John Wintz Resume</h2>
+					<span class="close">&times;</span>
+				</div>
+				<div class="modal-body">
+					<iframe id="resumeFrame" src="" frameborder="0"></iframe>
+					<div class="modal-actions">
+						<a href="JohnWintzResume2025.pdf" class="button" download>Download PDF</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			const modal = document.getElementById('resumeModal');
+			const resumeFrame = document.getElementById('resumeFrame');
+			const closeBtn = document.querySelector('.close');
+			
+			function openResumeModal(e) {
+				e.preventDefault();
+				resumeFrame.src = 'JohnWintzResume2025.pdf';
+				modal.style.display = 'block';
+				document.body.style.overflow = 'hidden';
+			}
+			
+			function closeResumeModal() {
+				modal.style.display = 'none';
+				resumeFrame.src = ''; 
+				document.body.style.overflow = 'auto';
+			}
+			
+			closeBtn.onclick = closeResumeModal;
+			
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					closeResumeModal();
+				}
+			}
+			
+			document.addEventListener('keydown', function(event) {
+				if (event.key === 'Escape' && modal.style.display === 'block') {
+					closeResumeModal();
+				}
+			});
+		</script> 
+		<!-- <script>
+			$('#nav a.no-scroll').removeClass('scrolly');
+		</script> -->
 	</body>
 </html>
